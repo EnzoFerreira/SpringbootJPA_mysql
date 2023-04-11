@@ -88,14 +88,15 @@ public class Filme {
 	
 	public Filme() {}
 	public Filme(DadosCadastroFilme dados) {
-		this.titulo = this.getTitulo();
-		this.ator = this.getAtor();
-		this.duracao = this.getDuracao();
-		this.lancamento = this.getLancamento();
-		this.pais = this.getPais();
+		this.ativo = true;
+		this.titulo = dados.titulo();
+		this.ator = dados.ator();
+		this.duracao = dados.duracao();
+		this.lancamento = dados.lancamento();
+		this.pais = dados.pais();
 		this.genero = dados.genero();
 		this.ficha = new Ficha(dados.ficha());
-		this.ativo = true;
+
 	}
 	
 	
